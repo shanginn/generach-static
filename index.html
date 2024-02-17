@@ -25,16 +25,6 @@
         });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/96492719" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-
-    <script>
-        const url = new URL(window.location.href);
-        const startParam = url.searchParams.get("start");
-        if (startParam) {
-            const button = document.getElementById("tgLink");
-            button.href += "&start=" + startParam;
-        }
-    </script>
 </head>
 <body class="bg-blue-900 text-white">
 <section class="mb-10">
@@ -116,5 +106,13 @@
         </div>
     </div>
 </section>
+<script>
+    const url = new URL(window.location.href);
+    const startParam = url.searchParams.get("start");
+    if (startParam) {
+        const button = document.getElementById("tgLink");
+        button.href += "&start=" + startParam;
+    }
+</script>
 </body>
 </html>
