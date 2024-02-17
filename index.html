@@ -30,7 +30,7 @@
 <section class="mb-10">
     <div class="relative flex w-full items-center justify-between bg-white py-2 dark:bg-gray-800 lg:flex-wrap lg:justify-start">
         <div class="flex w-full flex-wrap items-center justify-between px-6">
-            <a href="tg://resolve?domain=genera4_bot" role="button" class="flex items-center" id="tgLink">
+            <a href="tg://resolve?domain=genera4_bot" role="button" class="flex items-center tg-link">
                 <img src="assets/logo-genera4.png" alt="ГЕНЕРА4 Logo" class="h-8 w-8 mr-2">
                 <div class="russo-one-regular text-2xl text-gray-700">ГЕНЕРА4</div>
             </a>
@@ -46,11 +46,11 @@
                         <span class="text-blue-500">без границ</span><br />
                         с ботом Генера4
                     </h1>
-                    <a class="shine mb-2 inline-block rounded bg-blue-500 px-6 py-4 text-md font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-lg dark:shadow-gray-700 md:mr-2 md:mb-0"
+                    <a class="tg-link shine mb-2 inline-block rounded bg-blue-500 px-6 py-4 text-md font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-lg dark:shadow-gray-700 md:mr-2 md:mb-0"
                        href="tg://resolve?domain=genera4_bot" role="button">
                         <i class="fa-brands fa-telegram"></i> Перейти к боту
                     </a>
-                    <a class="inline-block rounded px-6 py-4 text-md font-medium uppercase leading-normal text-blue-500 transition duration-150 ease-in-out hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 focus:text-blue-600 focus:outline-none focus:ring-0 active:text-blue-700 dark:hover:bg-gray-800 dark:hover:bg-opacity-60"
+                    <a id="tgLinkWeb" class="inline-block rounded px-6 py-4 text-md font-medium uppercase leading-normal text-blue-500 transition duration-150 ease-in-out hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 focus:text-blue-600 focus:outline-none focus:ring-0 active:text-blue-700 dark:hover:bg-gray-800 dark:hover:bg-opacity-60"
                        href="https://web.telegram.org/a/#?tgaddr=tg%3A%2F%2Fresolve%3Fdomain%3Dgenera4_bot" role="button">
                         Открыть в браузере
                     </a>
@@ -110,8 +110,14 @@
     const url = new URL(window.location.href);
     const startParam = url.searchParams.get("start");
     if (startParam) {
-        const button = document.getElementById("tgLink");
-        button.href += "&start=" + startParam;
+        const buttons = document.querySelectorAll(".tg-link");
+        buttons.forEach(button => {
+            button.href += "&start=" + startParam;
+        });
+
+        const webLink = document.getElementById("tgLinkWeb");
+        const encodedStartParam = encodeURIComponent("&start=" + startParam);
+        webLink.href += encodedStartParam;
     }
 </script>
 </body>
