@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>генерач - ваша нейросеть в телеграм боте</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="//cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link href="//fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(96492719, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/96492719" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body class="bg-blue-900 text-white">
+<section>
+    <div class="relative flex w-full items-center justify-between bg-white py-2 dark:bg-gray-800 lg:flex-wrap lg:justify-start">
+        <div class="flex w-full flex-wrap items-center justify-between px-6">
+            <a href="tg://resolve?domain=genera4_bot" role="button" class="flex items-center tg-link">
+                <img src="assets/logo-genera4.png" alt="ГЕНЕРА4 Logo" class="h-8 w-8 mr-2">
+                <div class="russo-one-regular text-2xl text-gray-700 dark:text-gray-100">ГЕНЕРА4</div>
+            </a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="bg-gray-50 px-6 py-12 text-center dark:bg-gray-900 md:px-12 lg:text-left">
+        <div class="mx-auto max-w-7xl">
+            <div class="grid items-center gap-12 lg:grid-cols-2">
+                <div class="mt-12 lg:mt-0">
+                    <h1 class="mt-2 mb-16 text-5xl text-black dark:text-white font-bold tracking-tight md:text-6xl xl:text-7xl">
+                        Увеличение изображения <br />
+                        <span class="text-blue-500">без потери качества</span><br />
+                        с ботом Генерач
+                    </h1>
+                    <a class="tg-link shine mb-2 inline-block rounded bg-blue-500 px-6 py-4 text-md font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-lg dark:shadow-gray-700 md:mr-1 md:mb-0"
+                       href="tg://resolve?domain=genera4_bot&start=grf_upscale" role="button">
+                        <i class="fa-brands fa-telegram"></i> Увеличить изображение в боте
+                    </a>
+                    <a id="tgLinkWeb" class="inline-block rounded px-6 py-4 text-md font-medium uppercase leading-normal text-blue-500 transition duration-150 ease-in-out hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 focus:text-blue-600 focus:outline-none focus:ring-0 active:text-blue-700 dark:hover:bg-gray-800 dark:hover:bg-opacity-60"
+                       href="https://web.telegram.org/a/#?tgaddr=tg%3A%2F%2Fresolve%3Fdomain%3Dgenera4_bot%26start%3Dgrf_upscale" role="button">
+                        Открыть в браузере
+                    </a>
+                    <div class="mt-6 text-left text-gray-800 dark:text-gray-300">
+                        <p>
+                            Генерач — это ваш идеальный инструмент для увеличения изображений без потери качества. Наша нейросеть позволяет увеличить размер изображения в 2 раза, сохраняя при этом четкость и детализацию. Независимо от того, работаете ли вы над проектом или личными фотографиями, Генерач гарантирует отличные результаты.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img2img/upscale.webp" alt="Пример увеличения изображения" class="w-full">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="px-6 py-12 md:px-12">
+        <div class="mx-auto max-w-7xl">
+            <h1 class="text-3xl font-bold text-left text-white-800 mb-6">Увеличение изображений x2 с Генерач</h1>
+            <p class="text-lg mb-4">
+                Увеличьте размер изображений в два раза без потери качества с помощью Генерач! Воспользуйтесь передовыми алгоритмами нейросети для улучшения четкости изображений, избегая размытости и артефактов. Теперь вы можете получить изображения высокого разрешения даже из небольших файлов.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-white-800 mb-3">Почему стоит выбрать Генерач для увеличения изображения?</h2>
+            <ul class="list-disc list-inside mb-6 text-white-700">
+                <li>Увеличение изображения в 2 раза без потери качества и четкости.</li>
+                <li>Идеально для фотографий, графики и мелких изображений, требующих детализации.</li>
+                <li>Нейросети улучшают текстуры, сохраняя естественные контуры и линии.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-white-800 mb-3">Для кого подходит функция увеличения изображения?</h2>
+            <ul class="list-disc list-inside mb-6 text-white-700">
+                <li><strong>Дизайнеры:</strong> Увеличивайте изображения для печатных материалов или крупных баннеров.</li>
+                <li><strong>Фотографы:</strong> Получайте качественные увеличенные снимки для печати.</li>
+                <li><strong>Интернет-магазины:</strong> Увеличивайте изображения товаров, чтобы ваши клиенты видели детали продукции в высоком качестве.</li>
+                <li><strong>Социальные сети:</strong> Делайте ваши посты более качественными, даже если исходные изображения были небольшими.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-white-800 mb-3">Как это работает?</h2>
+            <ul class="list-disc list-inside mb-6 text-white-700">
+                <li>Загрузите изображение в бот.</li>
+                <li>Нажмите кнопку ⬆️ Увеличить x2 ⬆️.</li>
+                <li>Генерач обработает изображение и увеличит его размер в два раза, сохраняя высокое качество.</li>
+            </ul>
+
+            <p class="text-lg text-left text-white-800 font-semibold">Попробуйте функцию увеличения изображения x2 с Генерач прямо сейчас и наслаждайтесь четкими и качественными изображениями за секунды!</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white text-gray-800">
+    <div class="px-6 py-12 md:px-12">
+        <div class="mx-auto max-w-7xl">
+            <h1 class="text-3xl font-bold text-left text-gray-900 mb-6">Откройте для себя мир творческих возможностей с Генерач</h1>
+            <p class="text-lg mb-4">Представьте, что у вас есть инструмент, который может превратить любые ваши идеи в потрясающие визуальные шедевры. Генерач - это именно такой инструмент. Он позволяет создавать уникальные изображения, иллюстрации и арт-проекты, используя лишь силу вашего воображения.</p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Безграничная креативность:</h2>
+            <ul class="list-disc list-inside mb-6 text-gray-700">
+                <li>Генерируйте изображения любого стиля: от классических до современных, от реалистичных до фантастических.</li>
+                <li>Превращайте слова в искусство: описывайте свои идеи естественным языком, и Генерач превратит их в визуальные шедевры.</li>
+                <li>Бесконечные варианты: каждый запрос порождает уникальные результаты, позволяя вам исследовать неограниченное количество творческих путей.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Идеальный инструмент для профессионалов и любителей:</h2>
+            <ul class="list-disc list-inside mb-6 text-gray-700">
+                <li>Дизайнеры могут использовать Генерач для создания оригинальных концептов, макетов и визуализаций.</li>
+                <li>Художники найдут в нем источник вдохновения и новые способы выражения своего творчества.</li>
+                <li>Маркетологи и рекламщики смогут создавать захватывающие визуалы для своих кампаний.</li>
+                <li>Писатели и сценаристы получат возможность визуализировать сцены и персонажей своих произведений.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Легко и удобно:</h2>
+            <ul class="list-disc list-inside mb-6 text-gray-700">
+                <li>Не требуется специальных навыков или знаний в области графического дизайна.</li>
+                <li>Интуитивно понятный интерфейс и быстрые результаты.</li>
+                <li>Возможность сохранять и делиться своими творениями с миром.</li>
+            </ul>
+
+            <p class="text-lg text-left text-gray-900 font-semibold">Присоединяйтесь к революции в области творчества с Генерач и раскройте свой творческий потенциал уже сегодня!</p>
+        </div>
+    </div>
+</section>
+<script>
+    const url = new URL(window.location.href);
+    const startParam = url.searchParams.get("start");
+    if (startParam) {
+        const buttons = document.querySelectorAll(".tg-link");
+        buttons.forEach(button => {
+            button.href += "&start=" + startParam;
+        });
+
+        const webLink = document.getElementById("tgLinkWeb");
+        const encodedStartParam = encodeURIComponent("&start=" + startParam);
+        webLink.href += encodedStartParam;
+    }
+</script>
+</body>
+</html>
