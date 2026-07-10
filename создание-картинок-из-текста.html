@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>генерач - ваша нейросеть в телеграм боте</title>
+    <title>Создание изображений в 2K по тексту — Генерач</title>
+    <meta name="description" content="Создавайте детализированные изображения в 2K по обычному текстовому описанию в Telegram-боте Генерач.">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="//cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-    <link href="//fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;family=Russo+One&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
 
     <!-- Yandex.Metrika counter -->
@@ -51,7 +52,7 @@
                         с ботом Генерач
                     </h1>
                     <a class="tg-link shine mb-2 inline-block rounded bg-blue-500 px-6 py-4 text-md font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-lg dark:shadow-gray-700 md:mr-1 md:mb-0"
-                       href="tg://resolve?domain=genera4_bot&start=grf_text_to_image" role="button">
+                       href="tg://resolve?domain=genera4_bot&amp;start=grf_text_to_image" role="button">
                         <i class="fa-brands fa-telegram"></i> Создать изображение по тексту
                     </a>
                     <a id="tgLinkWeb" class="inline-block rounded px-6 py-4 text-md font-medium uppercase leading-normal text-blue-500 transition duration-150 ease-in-out hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600 focus:text-blue-600 focus:outline-none focus:ring-0 active:text-blue-700 dark:hover:bg-gray-800 dark:hover:bg-opacity-60"
@@ -60,7 +61,7 @@
                     </a>
                     <div class="mt-6 text-left text-gray-800 dark:text-gray-300">
                         <p>
-                            Генерач открывает безграничные возможности для вашего воображения, превращая текст в уникальные изображения с помощью передовых моделей нейросетей. Введите любое текстовое описание, и Генерач создаст для вас визуальный шедевр за несколько секунд. Этот инструмент идеально подходит для дизайнеров, писателей, маркетологов и всех, кто хочет преобразовать свои идеи в изображения.
+                            Опишите идею привычными словами — Генерач поймёт запрос на вашем языке и создаст детализированное изображение в разрешении 2K. Не нужно переводить текст, выбирать режим обработки или настраивать размер вручную.
                         </p>
                     </div>
                 </div>
@@ -76,12 +77,15 @@
         <div class="mx-auto max-w-7xl">
             <h1 class="text-3xl font-bold text-left text-white-800 mb-6">Создание изображений по текстовому описанию с Генерач</h1>
             <p class="text-lg mb-4">
-                Генерач позволяет вам легко создавать уникальные изображения на основе вашего текстового описания. Будь то концепт-арт, иллюстрация, или просто абстрактное изображение, этот инструмент использует искусственный интеллект для генерации изображения, которое точно соответствует вашему запросу.
+                Генерач позволяет создавать уникальные изображения по свободному текстовому описанию. Будь то концепт-арт, иллюстрация или абстрактная композиция, бот передаёт смысл вашего запроса современной модели генерации и автоматически выбирает подходящий формат изображения.
             </p>
 
             <h2 class="text-2xl font-semibold text-white-800 mb-3">Почему стоит использовать текстовую генерацию изображений в Генерач?</h2>
             <ul class="list-disc list-inside mb-6 text-white-700">
+                <li>Современная основная модель; прежняя версия доступна в настройках как «Устаревшая».</li>
                 <li>Мгновенное преобразование текста в изображение с использованием ИИ.</li>
+                <li>Высокое разрешение 2K без ручной настройки ширины и высоты.</li>
+                <li>Запросы на привычном языке без обязательного перевода на английский.</li>
                 <li>Создание уникальных и оригинальных визуалов на основе ваших идей.</li>
                 <li>Поддержка различных стилей: от реалистичных до фантастических и абстрактных изображений.</li>
             </ul>
@@ -96,9 +100,9 @@
 
             <h2 class="text-2xl font-semibold text-white-800 mb-3">Как это работает?</h2>
             <ul class="list-disc list-inside mb-6 text-white-700">
-                <li>Введите текстовое описание в боте.</li>
+                <li>Введите в боте описание того, что хотите увидеть.</li>
                 <li>Отправьте сообщение.</li>
-                <li>Генерач за считанные секунды создаст уникальное изображение по вашему запросу.</li>
+                <li>Генерач автоматически подберёт формат и создаст изображение в 2K.</li>
             </ul>
 
             <p class="text-lg text-left text-white-800 font-semibold">Попробуйте функцию генерации изображений по тексту с Генерач прямо сейчас и получите уникальные изображения за мгновение!</p>

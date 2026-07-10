@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование изображений текстом — Генерач</title>
+    <meta name="description" content="Загрузите фотографию и опишите нужные изменения обычными словами — Telegram-бот Генерач отредактирует изображение в высоком разрешении.">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="//cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link href="//fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(96492719, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/96492719" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body class="bg-blue-900 text-white">
+<header>
+    <div class="flex w-full items-center bg-white px-6 py-2 dark:bg-gray-800">
+        <a href="tg://resolve?domain=genera4_bot" class="flex items-center tg-link">
+            <img src="assets/logo-genera4.png" alt="Логотип Генерач" class="h-8 w-8 mr-2">
+            <span class="russo-one-regular text-2xl text-gray-700 dark:text-gray-100">ГЕНЕРА4</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="bg-gray-50 px-6 py-12 text-center dark:bg-gray-900 md:px-12 lg:text-left">
+        <div class="mx-auto max-w-7xl grid items-center gap-12 lg:grid-cols-2">
+            <div>
+                <h1 class="mb-8 text-5xl font-bold tracking-tight text-black dark:text-white md:text-6xl">
+                    Редактируйте фото <br>
+                    <span class="text-blue-500">обычными словами</span>
+                </h1>
+                <p class="mb-8 text-left text-gray-800 dark:text-gray-300">
+                    Отправьте изображение, выберите «Редактировать текстом» и опишите результат:
+                    «замени фон на ночной город», «добавь солнечные очки» или «убери надпись».
+                    Можно приложить второе изображение как дополнительный референс.
+                </p>
+                <a class="tg-link shine mb-2 inline-block rounded bg-blue-500 px-6 py-4 text-md font-medium uppercase text-white shadow-md transition hover:bg-blue-600 hover:shadow-lg"
+                   href="tg://resolve?domain=genera4_bot&amp;start=grf_edit_with_text" role="button">
+                    <i class="fa-brands fa-telegram"></i> Редактировать в боте
+                </a>
+                <a id="tgLinkWeb" class="inline-block rounded px-6 py-4 text-md font-medium uppercase text-blue-500 transition hover:bg-gray-500 hover:bg-opacity-10 hover:text-blue-600"
+                   href="https://web.telegram.org/a/#?tgaddr=tg%3A%2F%2Fresolve%3Fdomain%3Dgenera4_bot%26start%3Dgrf_edit_with_text" role="button">
+                    Открыть в браузере
+                </a>
+            </div>
+
+            <div class="rounded-3xl bg-blue-950 p-6 shadow-2xl" aria-label="Схема редактирования изображения">
+                <div class="grid gap-4 sm:grid-cols-3 sm:items-center">
+                    <div class="rounded-2xl bg-gray-800 p-6 text-center">
+                        <i class="fa-regular fa-image text-5xl text-blue-400"></i>
+                        <p class="mt-3 font-semibold">Ваше фото</p>
+                    </div>
+                    <div class="rounded-2xl bg-blue-600 p-5 text-center shadow-lg">
+                        <i class="fa-solid fa-quote-left text-2xl"></i>
+                        <p class="mt-2 text-sm">«Добавь тёплый закат и убери людей»</p>
+                    </div>
+                    <div class="rounded-2xl bg-gray-800 p-6 text-center">
+                        <i class="fa-solid fa-wand-magic-sparkles text-5xl text-blue-400"></i>
+                        <p class="mt-3 font-semibold">Готово</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-12 md:px-12">
+        <div class="mx-auto max-w-7xl">
+            <h2 class="mb-6 text-3xl font-bold">Что можно изменить</h2>
+            <div class="grid gap-6 md:grid-cols-3">
+                <article class="rounded-2xl bg-blue-950 p-6">
+                    <i class="fa-solid fa-panorama mb-4 text-3xl text-blue-400"></i>
+                    <h3 class="mb-2 text-xl font-semibold">Фон и окружение</h3>
+                    <p>Перенесите объект в новую сцену, замените время суток или уберите лишние детали.</p>
+                </article>
+                <article class="rounded-2xl bg-blue-950 p-6">
+                    <i class="fa-solid fa-shirt mb-4 text-3xl text-blue-400"></i>
+                    <h3 class="mb-2 text-xl font-semibold">Внешний вид</h3>
+                    <p>Измените одежду, цвет, материал или стиль, сохранив основу исходного изображения.</p>
+                </article>
+                <article class="rounded-2xl bg-blue-950 p-6">
+                    <i class="fa-solid fa-eraser mb-4 text-3xl text-blue-400"></i>
+                    <h3 class="mb-2 text-xl font-semibold">Точечные правки</h3>
+                    <p>Добавьте или удалите предмет, исправьте надпись и уточните композицию.</p>
+                </article>
+            </div>
+
+            <h2 class="mt-12 mb-4 text-3xl font-bold">Как это работает</h2>
+            <ol class="list-decimal list-inside space-y-2 text-lg">
+                <li>Отправьте фотографию или изображение в бот.</li>
+                <li>Нажмите «Редактировать текстом».</li>
+                <li>Ответьте на сообщение бота текстовой инструкцией; при желании приложите второй референс.</li>
+                <li>Получите готовое изображение и продолжите редактирование одной кнопкой.</li>
+            </ol>
+        </div>
+    </section>
+</main>
+
+<script>
+    const url = new URL(window.location.href);
+    const startParam = url.searchParams.get("start");
+    if (startParam) {
+        document.querySelectorAll(".tg-link").forEach(button => {
+            button.href += "&start=" + encodeURIComponent(startParam);
+        });
+
+        const webLink = document.getElementById("tgLinkWeb");
+        webLink.href += encodeURIComponent("&start=" + startParam);
+    }
+</script>
+</body>
+</html>
